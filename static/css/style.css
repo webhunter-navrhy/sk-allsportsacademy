@@ -101,7 +101,7 @@ small{color:var(--sed)}
 blockquote{margin:0;background:#fff;border-radius:var(--r);padding:1.5rem;border-top:5px solid var(--oliva)}
 blockquote p{margin:0 0 1rem;font-size:1.1rem}
 blockquote footer{color:var(--sed);font-size:.95rem}
-.kontakt a{display:inline-block;padding:.5rem 0}
+.kontakt a{display:inline-block;padding:.75rem 0}
 .formular button{min-height:2.75rem;padding-inline:2rem}
 td{white-space:nowrap}
 @media (max-width:56rem){
@@ -109,3 +109,7 @@ td{white-space:nowrap}
  .cenniky{gap:1rem}
  #kurz{padding-top:3.5rem}
 }
+
+.drahy{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem auto 0;max-width:72rem;padding:0 1.25rem}
+.draha{border-radius:var(--r)}
+@media (max-width:56rem){.drahy{grid-template-columns:1fr}.draha{aspect-ratio:16/9}}
