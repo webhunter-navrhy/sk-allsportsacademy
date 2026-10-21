@@ -3,19 +3,15 @@
 {% set cesta = '' %}
 {% block obsah %}
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="kicker">Staré Hory · Banská Bystrica</p>
-      <h1>Plávať, lyžovať a liezť sa u nás naučia deti, školy aj dospelí</h1>
-      <p class="lead">Plavecká, lyžiarska a lezecká akadémia ASA. Kurzy, lekcie a kempy pre jednotlivcov aj celé triedy.</p>
-      <p><a class="btn" href="#kurz">Nájsť kurz</a> <a class="btn btn-svetly" href="#kontakt">Napísať nám</a></p>
-    </div>
-    <div class="hero-foto">{{ img('foto-01.jpg', 'Deti na svahu s lyžiarskym inštruktorom', sizes='(min-width: 64rem) 40rem, 100vw') }}</div>
+  <div class="wrap hero-hlava">
+    <p class="kicker">Staré Hory · Banská Bystrica</p>
+    <h1>Plávať, lyžovať a liezť sa naučíte u nás</h1>
+    <p class="lead">Plavecká, lyžiarska a lezecká akadémia ASA. Kurzy, lekcie a kempy pre deti, školy aj dospelých.</p>
   </div>
-  <div class="wrap drahy">
-    <a href="#plavanie"><b>Plávanie</b><span>Kurzy pre školy a škôlky</span></a>
-    <a href="#lyzovanie"><b>Lyžovanie</b><span>Lyžiarska škola a škôlka</span></a>
-    <a href="#lezenie"><b>Lezenie</b><span>Krúžky, kurzy a kempy</span></a>
+  <div class="drahy">
+    <a href="#plavanie" class="draha d1">{{ img('foto-04.jpg', 'Deti v bazéne na plaveckom kurze', sizes='(min-width: 56rem) 34vw, 100vw') }}<span><b>Plávanie</b>Kurzy pre školy a škôlky</span></a>
+    <a href="#lyzovanie" class="draha d2">{{ img('foto-01.jpg', 'Deti na svahu s lyžiarskym inštruktorom', sizes='(min-width: 56rem) 34vw, 100vw') }}<span><b>Lyžovanie</b>Lyžiarska škola a škôlka</span></a>
+    <a href="#lezenie" class="draha d3">{{ img('foto-05.jpg', 'Deti liezú po umelej lezeckej stene', sizes='(min-width: 56rem) 34vw, 100vw') }}<span><b>Lezenie</b>Krúžky, kurzy a kempy</span></a>
   </div>
 </section>
 
@@ -69,10 +65,9 @@
 
 <section class="sekce lyzovanie" id="lyzovanie">
   <div class="wrap">
-    <div class="trojfoto">
-      <div class="velka">{{ img('foto-02.jpg', 'Skupina lyžiarov na svahu', sizes='(min-width: 64rem) 40rem, 100vw') }}</div>
-      <div>{{ img('foto-10.jpg', 'Lyžiarska škôlka so stanom ASA na svahu', sizes='(min-width: 64rem) 20rem, 50vw') }}</div>
-      <div>{{ img('foto-13.jpg', 'Dieťa na lyžiach na svahu', sizes='(min-width: 64rem) 20rem, 50vw') }}</div>
+    <div class="dvefoto">
+      <div>{{ img('foto-10.jpg', 'Lyžiarska škôlka so stanom ASA na svahu', sizes='(min-width: 56rem) 36rem, 100vw') }}</div>
+      <div>{{ img('foto-03.jpg', 'Deti na lyžiarskej lekcii s inštruktorom', sizes='(min-width: 56rem) 36rem, 100vw') }}</div>
     </div>
     <div class="dva-text">
       <div>
@@ -114,21 +109,39 @@
 <section class="sekce cennik" id="cennik">
   <div class="wrap">
     <h2>Cenník</h2>
+    <div class="cenniky">
+    <div>
     <h3>Lyžiarske lekcie</h3>
-    <div class="tab-wrap"><table>
+    <table class="karta">
       <thead><tr>{% for h in data.cennik.lyzovanie.hlavicka %}<th scope="col">{{ h }}</th>{% endfor %}</tr></thead>
       <tbody>{% for r in data.cennik.lyzovanie.riadky %}<tr><th scope="row">{{ r[0] }}</th>{% for c in r[1:] %}<td>{{ c }}</td>{% endfor %}</tr>{% endfor %}</tbody>
-    </table></div>
+    </table>
     <h3>{{ data.cennik.lyzovanie.skupina.nazov }}</h3>
-    <div class="tab-wrap"><table>
+    <table class="karta">
       <tbody>{% for r in data.cennik.lyzovanie.skupina.riadky %}<tr><th scope="row">{{ r[0] }}</th><td>{{ r[1] }}</td></tr>{% endfor %}</tbody>
-    </table></div>
+    </table>
     {% for p in data.cennik.lyzovanie.poznamky %}<p class="poznamka">{{ p }}</p>{% endfor %}
+    </div>
+    <div>
     <h3>Kurzy lezenia</h3>
-    <div class="tab-wrap"><table>
-      <tbody>{% for k in data.cennik.lezenie %}<tr><th scope="row">{{ k.kod }}</th><td>{{ k.nazov }}</td><td>{{ k.cena }}{% if k.dalsia %}<br><small>{{ k.dalsia }}</small>{% endif %}</td></tr>{% endfor %}</tbody>
-    </table></div>
+    <table class="karta lez">
+      <tbody>{% for k in data.cennik.lezenie %}<tr><th scope="row"><span class="kod">{{ k.kod }}</span> {{ k.nazov }}</th><td>{{ k.cena }}{% if k.dalsia %}<br><small>{{ k.dalsia }}</small>{% endif %}</td></tr>{% endfor %}</tbody>
+    </table>
+    </div>
+    </div>
     <p class="poznamka">Ceny a termíny si pred rezerváciou radi potvrdíme.</p>
+  </div>
+</section>
+
+<section class="sekce ohlasy" id="ohlasy">
+  <div class="wrap">
+    <h2>Čo píšu rodičia a školy</h2>
+    <div class="karty">
+      <blockquote><p>Pod dohľadom šikovných a priateľských trénerov sa priučili základom lezenia. Decka max spokojne, bolo výborne.</p><footer>Kubo Choma, letný lezecký kemp na Donovaloch</footer></blockquote>
+      <blockquote><p>Ďakujeme za krásny lyžiarsky výcvik, skvelý prístup inštruktorov a za ich trpezlivosť.</p><footer>Voskarová, lyžiarsky kurz</footer></blockquote>
+      <blockquote><p>Vedeli sme, že dávame Maroška do dobrých ruk, chodil tam veľmi rád a bol nadšený.</p><footer>Pavlína Bartová</footer></blockquote>
+    </div>
+    <p class="poznamka">Ohlasy sú z <a href="https://allsportsacademy.sk/referencie" rel="noopener">pôvodnej stránky Referencie</a>.</p>
   </div>
 </section>
 
@@ -138,8 +151,8 @@
       <h2>Kontakt</h2>
       <p>Napíšte nám, ktorý kurz vás zaujíma a pre koho. Ozveme sa s ďalšími informáciami.</p>
       <p><b>Rezervácia lekcií:</b><br><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
-      <p><b>E-mail:</b><br><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="mailto:kurzy@allsportsacademy.sk">kurzy@allsportsacademy.sk</a></p>
-      <p><a href="https://www.facebook.com/asaallsportsacademy/" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/lyziarska_skola_asa/" rel="noopener">Instagram</a></p>
+      <p><b>E-mail:</b><br><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="mailto:asa@lyziarskaskola.eu">asa@lyziarskaskola.eu</a></p>
+      <p class="soc"><a href="https://www.facebook.com/asaallsportsacademy/" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/lyziarska_skola_asa/" rel="noopener">Instagram</a></p>
     </div>
     <div>{% include "_formular.html" %}</div>
   </div>
