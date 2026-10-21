@@ -69,7 +69,7 @@ small{color:var(--sed)}
 .past{position:absolute;left:-999px}
 .formular button{justify-self:start}
 .paticka{background:var(--tmava);color:#d6e4ee;padding:2rem 0}
-.paticka p{margin:.2rem 0}.paticka a{color:#fff}
+.paticka p{margin:.2rem 0}.paticka a{color:#fff;display:inline-block;padding:12px 0}
 :focus-visible{outline:3px solid var(--oliva);outline-offset:2px}
 @media (max-width:56rem){
  .hero-grid,.dva,.dva-text,.karty{grid-template-columns:1fr}
