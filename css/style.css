@@ -1,0 +1,135 @@
+@font-face{font-family:"Bricolage Grotesque";src:url(../fonts/bricolage-grotesque-latin-ext.woff2) format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Bricolage Grotesque";src:url(../fonts/bricolage-grotesque-latin.woff2) format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Figtree";src:url(../fonts/figtree-latin-ext.woff2) format("woff2");font-weight:300 900;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Figtree";src:url(../fonts/figtree-latin.woff2) format("woff2");font-weight:300 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--modra:#1d587f;--tmava:#143e5a;--oliva:#939d18;--svetla:#e4f3fb;--papier:#fbf9f3;--text:#1e2a33;--sed:#5b6b76;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;font:1.0625rem/1.65 "Figtree",system-ui,sans-serif;color:var(--text);background:var(--papier)}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",sans-serif;line-height:1.1;margin:0 0 .6em;color:var(--tmava);letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,5.4vw,3.9rem);font-weight:800}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:700}
+a{color:var(--modra)}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:99}
+.hlavicka{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e3e0d4}
+.hlavicka .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.2rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--tmava);font-family:"Bricolage Grotesque",sans-serif;font-weight:500;font-size:1.15rem}
+.logo b{font-weight:800;color:var(--modra)}
+.hlavicka nav{display:flex;gap:1.3rem;flex-wrap:wrap;justify-content:flex-end}
+.hlavicka nav a{text-decoration:none;color:var(--text);font-weight:600;font-size:.95rem;padding:.75rem .3rem;display:inline-block}
+.hlavicka nav a:hover{color:var(--modra)}
+.btn{display:inline-block;background:var(--modra);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.5rem;border-radius:999px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{background:var(--tmava)}
+.btn-svetly{background:transparent;color:var(--modra);box-shadow:inset 0 0 0 2px var(--modra)}
+.btn-svetly:hover{background:var(--modra);color:#fff}
+.hero{padding:3rem 0 0;background:linear-gradient(180deg,var(--svetla),var(--papier))}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center}
+.kicker{color:var(--oliva);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;margin:0 0 1rem;filter:brightness(.8)}
+.lead{font-size:1.2rem;max-width:34rem}
+.hero-foto img{border-radius:var(--r);aspect-ratio:4/3.2;object-fit:cover;width:100%}
+.sekce{padding:5rem 0}
+.kurz,#kurz{padding-top:6.5rem}
+.vyber{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.vyber button{font:inherit;font-weight:700;padding:.7rem 1.3rem;border-radius:999px;border:2px solid var(--modra);background:transparent;color:var(--modra);cursor:pointer}
+.vyber button[aria-selected=true]{background:var(--modra);color:#fff}
+.panel{background:#fff;border-radius:var(--r);padding:1.5rem 1.8rem;border-left:6px solid var(--oliva)}
+.zoznam{list-style:none;margin:0 0 1rem;padding:0}
+.zoznam li{padding:.55rem 0}
+.zoznam li b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;color:var(--tmava)}
+.panel .zoznam{margin:0}
+.dva{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.foto img{border-radius:var(--r);width:100%;aspect-ratio:4/3;object-fit:cover}
+.plavanie{background:var(--svetla)}
+.lyzovanie .trojfoto{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin-bottom:2.5rem}
+.trojfoto img{border-radius:var(--r);width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+.dva-text{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.dva-text h2{grid-column:auto}
+.lezenie{background:var(--tmava);color:#e9f1f6}
+.lezenie h2{color:#fff}.lezenie a:not(.btn){color:#fff}
+.lezenie .btn{background:var(--oliva);color:#1a1d03}
+.obratene>div:first-child{order:0}
+.karty{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.karty article img{border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;width:100%;margin-bottom:1rem}
+.cennik{background:#fff}
+.tab-wrap{overflow-x:auto;margin-bottom:1.5rem}
+table{border-collapse:collapse;width:100%;max-width:46rem}
+th,td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid #dcd9cc}
+thead th{font-family:"Bricolage Grotesque",sans-serif;color:var(--modra)}
+tbody th{font-weight:700}
+small{color:var(--sed)}
+.poznamka{color:var(--sed);max-width:46rem}
+.kontakt .dva{align-items:start}
+.formular{display:grid;gap:1rem}
+.formular label{display:grid;gap:.3rem;font-weight:600}
+.formular input,.formular textarea{font:inherit;padding:.75rem 1rem;border:2px solid #cfccbd;border-radius:10px;background:#fff}
+.formular input:focus,.formular textarea:focus{outline:3px solid var(--svetla);border-color:var(--modra)}
+.past{position:absolute;left:-999px}
+.formular button{justify-self:start}
+.paticka{background:var(--tmava);color:#d6e4ee;padding:2rem 0}
+.paticka p{margin:.2rem 0}.paticka a{color:#fff;display:inline-block;padding:12px 0}
+:focus-visible{outline:3px solid var(--oliva);outline-offset:2px}
+@media (max-width:56rem){
+ .hero-grid,.dva,.dva-text,.karty{grid-template-columns:1fr}
+ .hero-grid{gap:1.5rem}
+ #kurz{padding-top:4rem}
+ .lyzovanie .trojfoto{grid-template-columns:1fr 1fr}.trojfoto .velka{grid-column:1/-1}.trojfoto .velka img{aspect-ratio:16/10}
+ .lezenie .dva{display:flex;flex-direction:column}
+ .hlavicka{position:static}.hlavicka .wrap{flex-wrap:wrap;padding-block:.5rem}
+ .hlavicka nav{gap:.9rem;justify-content:flex-start}
+ .sekce{padding:3.5rem 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.hero-hlava{max-width:72rem}.hero-hlava h1{max-width:20ch}
+.draha{position:relative;display:block;overflow:hidden;aspect-ratio:4/4.4;padding:0;border-radius:0;color:#fff;text-decoration:none}
+.draha img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;aspect-ratio:auto;border-radius:0}
+.draha::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,62,90,0) 40%,rgba(20,62,90,.92))}
+.draha span{position:absolute;left:1.5rem;right:1.5rem;bottom:1.3rem;z-index:1;font-size:1rem}
+.draha b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.9rem}
+.draha.d1::after{background:linear-gradient(180deg,rgba(29,88,127,.05) 35%,rgba(29,88,127,.95))}
+#kurz{padding-top:5rem}
+.dvefoto{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem}
+.dvefoto img{border-radius:var(--r);width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 60%}
+.cenniky{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.cenniky table{max-width:none}
+.kod{display:inline-block;min-width:2rem;color:var(--oliva);filter:brightness(.75);font-family:"Bricolage Grotesque",sans-serif;font-weight:800}
+.lez td{white-space:nowrap;text-align:right}
+.ohlasy{background:var(--svetla)}
+blockquote{margin:0;background:#fff;border-radius:var(--r);padding:1.5rem;border-top:5px solid var(--oliva)}
+blockquote p{margin:0 0 1rem;font-size:1.1rem}
+blockquote footer{color:var(--sed);font-size:.95rem}
+.formular button{min-height:2.75rem;padding-inline:2rem}
+td{white-space:nowrap}
+@media (max-width:56rem){
+ .dvefoto,.cenniky{grid-template-columns:1fr}
+ .cenniky{gap:1rem}
+ #kurz{padding-top:3.5rem}
+}
+
+.drahy{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem auto 0;max-width:72rem;padding:0 1.25rem}
+.draha{border-radius:var(--r)}
+@media (max-width:56rem){.drahy{grid-template-columns:1fr}.draha{aspect-ratio:16/9}}
+
+.skip{min-height:44px;padding-top:.7rem}
+.kbtn{display:inline-flex;align-items:center;min-height:3rem;padding:.6rem 1.4rem;margin:.1rem 0}
+.ohlasy .karty{grid-template-columns:repeat(6,1fr)}
+.ohlasy blockquote{grid-column:span 2}
+.ohlasy blockquote:nth-child(n+4){grid-column:span 3}
+.drahy{max-width:none;padding:0;gap:0;margin-top:2.5rem}
+.draha{border-radius:0;aspect-ratio:4/3.4}
+.draha.d2::after{background:linear-gradient(180deg,rgba(41,128,185,.05) 35%,rgba(20,62,90,.95))}
+.draha.d3::after{background:linear-gradient(180deg,rgba(20,62,90,.05) 35%,rgba(20,62,90,.96))}
+@media (max-width:56rem){.ohlasy .karty{grid-template-columns:1fr}.ohlasy blockquote,.ohlasy blockquote:nth-child(n+4){grid-column:auto}.draha{aspect-ratio:16/9}}
+
+.kontakt .kbtn{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.4rem;box-sizing:border-box;text-align:center}
+.kontakt .btn:not(.btn-svetly){color:#fff}
+.draha{aspect-ratio:auto;height:min(62vh,34rem);min-height:22rem}
+.draha.d1::after{background:linear-gradient(180deg,rgba(41,128,185,.1) 30%,rgba(41,128,185,.92))}
+.draha.d2::after{background:linear-gradient(180deg,rgba(29,88,127,.1) 30%,rgba(29,88,127,.94))}
+.draha.d3::after{background:linear-gradient(180deg,rgba(95,168,211,.1) 30%,rgba(20,62,90,.9))}
+@media (max-width:56rem){.draha{height:auto;min-height:0;aspect-ratio:16/9}.kontakt .kbtn{width:100%}}
+.pata a[href^="tel:"],.pata a[href^="mailto:"],footer a[href^="tel:"],footer a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px}
+.cennik h3{margin-top:2.25rem}.cennik table+h3,.cennik table+p+h3{margin-top:2.5rem}
