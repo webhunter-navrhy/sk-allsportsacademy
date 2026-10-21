@@ -113,3 +113,14 @@ td{white-space:nowrap}
 .drahy{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem auto 0;max-width:72rem;padding:0 1.25rem}
 .draha{border-radius:var(--r)}
 @media (max-width:56rem){.drahy{grid-template-columns:1fr}.draha{aspect-ratio:16/9}}
+
+.skip{min-height:44px;padding-top:.7rem}
+.kbtn{display:inline-flex;align-items:center;min-height:3rem;padding:.6rem 1.4rem;margin:.1rem 0}
+.ohlasy .karty{grid-template-columns:repeat(6,1fr)}
+.ohlasy blockquote{grid-column:span 2}
+.ohlasy blockquote:nth-child(n+4){grid-column:span 3}
+.drahy{max-width:none;padding:0;gap:0;margin-top:2.5rem}
+.draha{border-radius:0;aspect-ratio:4/3.4}
+.draha.d2::after{background:linear-gradient(180deg,rgba(41,128,185,.05) 35%,rgba(20,62,90,.95))}
+.draha.d3::after{background:linear-gradient(180deg,rgba(20,62,90,.05) 35%,rgba(20,62,90,.96))}
+@media (max-width:56rem){.ohlasy .karty{grid-template-columns:1fr}.ohlasy blockquote,.ohlasy blockquote:nth-child(n+4){grid-column:auto}.draha{aspect-ratio:16/9}}

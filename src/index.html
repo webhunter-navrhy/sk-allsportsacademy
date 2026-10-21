@@ -139,6 +139,8 @@
     <div class="karty">
       <blockquote><p>Pod dohľadom šikovných a priateľských trénerov sa priučili základom lezenia. Decka max spokojne, bolo výborne.</p><footer>Kubo Choma, letný lezecký kemp na Donovaloch</footer></blockquote>
       <blockquote><p>Ďakujeme za krásny lyžiarsky výcvik, skvelý prístup inštruktorov a za ich trpezlivosť.</p><footer>Voskarová, lyžiarsky kurz</footer></blockquote>
+      <blockquote><p>Perfektný prístup a hlavne trpezlivosť, ktorú ste dokazovali každý deň.</p><footer>Ivana Švejkovská, lyžiarsky kurz v Čachove</footer></blockquote>
+      <blockquote><p>Spokojnosť od A po Z a pokiaľ bude možnosť, už teraz sa tešíme na ďalšiu spoluprácu!</p><footer>Kmeťová</footer></blockquote>
       <blockquote><p>Vedeli sme, že dávame Maroška do dobrých ruk, chodil tam veľmi rád a bol nadšený.</p><footer>Pavlína Bartová</footer></blockquote>
     </div>
     <p class="poznamka">Ohlasy sú z <a href="https://allsportsacademy.sk/referencie" rel="noopener">pôvodnej stránky Referencie</a>.</p>
@@ -150,8 +152,9 @@
     <div>
       <h2>Kontakt</h2>
       <p>Napíšte nám, ktorý kurz vás zaujíma a pre koho. Ozveme sa s ďalšími informáciami.</p>
-      <p><b>Rezervácia lekcií:</b><br><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
-      <p><b>E-mail:</b><br><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="mailto:asa@lyziarskaskola.eu">asa@lyziarskaskola.eu</a></p>
+      <p><a class="btn kbtn" href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">Rezervácia lekcií: {{ site.kontakt.telefon }}</a></p>
+      <p><a class="btn btn-svetly kbtn" href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></p>
+      <p><a class="btn btn-svetly kbtn" href="mailto:asa@lyziarskaskola.eu">asa@lyziarskaskola.eu</a></p>
       <p class="soc"><a href="https://www.facebook.com/asaallsportsacademy/" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/lyziarska_skola_asa/" rel="noopener">Instagram</a></p>
     </div>
     <div>{% include "_formular.html" %}</div>
