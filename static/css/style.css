@@ -86,7 +86,7 @@ small{color:var(--sed)}
  #kurz{padding-top:4rem}
  .lyzovanie .trojfoto{grid-template-columns:1fr 1fr}.trojfoto .velka{grid-column:1/-1}.trojfoto .velka img{aspect-ratio:16/10}
  .lezenie .dva{display:flex;flex-direction:column}
- .hlavicka .wrap{flex-wrap:wrap;padding-block:.5rem}
+ .hlavicka{position:static}.hlavicka .wrap{flex-wrap:wrap;padding-block:.5rem}
  .hlavicka nav{gap:.9rem;justify-content:flex-start}
  .sekce{padding:3.5rem 0}
 }
