@@ -132,3 +132,4 @@ td{white-space:nowrap}
 .draha.d3::after{background:linear-gradient(180deg,rgba(95,168,211,.1) 30%,rgba(20,62,90,.9))}
 @media (max-width:56rem){.draha{height:auto;min-height:0;aspect-ratio:16/9}.kontakt .kbtn{width:100%}}
 .pata a[href^="tel:"],.pata a[href^="mailto:"],footer a[href^="tel:"],footer a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px}
+.cennik h3{margin-top:2.25rem}.cennik table+h3,.cennik table+p+h3{margin-top:2.5rem}
