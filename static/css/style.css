@@ -19,7 +19,7 @@ a{color:var(--modra)}
 .logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--tmava);font-family:"Bricolage Grotesque",sans-serif;font-weight:500;font-size:1.15rem}
 .logo b{font-weight:800;color:var(--modra)}
 .hlavicka nav{display:flex;gap:1.3rem;flex-wrap:wrap;justify-content:flex-end}
-.hlavicka nav a{text-decoration:none;color:var(--text);font-weight:600;font-size:.95rem;padding:.4rem 0}
+.hlavicka nav a{text-decoration:none;color:var(--text);font-weight:600;font-size:.95rem;padding:.75rem .3rem;display:inline-block}
 .hlavicka nav a:hover{color:var(--modra)}
 .btn{display:inline-block;background:var(--modra);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.5rem;border-radius:999px;border:0;font:inherit;font-weight:700;cursor:pointer}
 .btn:hover{background:var(--tmava)}
