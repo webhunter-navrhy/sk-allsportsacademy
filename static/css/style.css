@@ -101,7 +101,6 @@ small{color:var(--sed)}
 blockquote{margin:0;background:#fff;border-radius:var(--r);padding:1.5rem;border-top:5px solid var(--oliva)}
 blockquote p{margin:0 0 1rem;font-size:1.1rem}
 blockquote footer{color:var(--sed);font-size:.95rem}
-.kontakt a{display:inline-block;padding:.75rem 0}
 .formular button{min-height:2.75rem;padding-inline:2rem}
 td{white-space:nowrap}
 @media (max-width:56rem){
@@ -124,3 +123,11 @@ td{white-space:nowrap}
 .draha.d2::after{background:linear-gradient(180deg,rgba(41,128,185,.05) 35%,rgba(20,62,90,.95))}
 .draha.d3::after{background:linear-gradient(180deg,rgba(20,62,90,.05) 35%,rgba(20,62,90,.96))}
 @media (max-width:56rem){.ohlasy .karty{grid-template-columns:1fr}.ohlasy blockquote,.ohlasy blockquote:nth-child(n+4){grid-column:auto}.draha{aspect-ratio:16/9}}
+
+.kontakt .kbtn{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.4rem;box-sizing:border-box;text-align:center}
+.kontakt .btn:not(.btn-svetly){color:#fff}
+.draha{aspect-ratio:auto;height:min(62vh,34rem);min-height:22rem}
+.draha.d1::after{background:linear-gradient(180deg,rgba(41,128,185,.1) 30%,rgba(41,128,185,.92))}
+.draha.d2::after{background:linear-gradient(180deg,rgba(29,88,127,.1) 30%,rgba(29,88,127,.94))}
+.draha.d3::after{background:linear-gradient(180deg,rgba(95,168,211,.1) 30%,rgba(20,62,90,.9))}
+@media (max-width:56rem){.draha{height:auto;min-height:0;aspect-ratio:16/9}.kontakt .kbtn{width:100%}}
