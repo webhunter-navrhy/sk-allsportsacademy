@@ -1,0 +1,32 @@
+{
+  "slug": "sk-allsportsacademy",
+  "nazev": "All Sports Academy (ASA)",
+  "url": "https://webhunter-navrhy.github.io/sk-allsportsacademy/",
+  "base": "/sk-allsportsacademy/",
+  "lang": "sk",
+  "popis": "Plavecká, lyžiarska a lezecká akadémia ASA zo Starých Hôr pri Banskej Bystrici: plavecké kurzy, lyžiarska škola, lezecké krúžky a kempy pre deti a školy.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "foto-02.jpg",
+  "logo": "logo.png",
+  "theme_color": "#1d587f",
+  "typ": "SportsActivityLocation",
+  "ico": "",
+  "kontakt": {
+    "email": "info@allsportsacademy.sk",
+    "telefon": "+421 949 424 892",
+    "adresa": {"ulice": "", "psc": "", "mesto": "Staré Hory, Banská Bystrica", "zeme": "SK"}
+  },
+  "oteviraci_doba": [],
+  "sameas": ["https://www.facebook.com/asaallsportsacademy/", "https://www.facebook.com/lyziarskaskolaasa/", "https://www.instagram.com/lyziarska_skola_asa/"],
+  "cenove_rozpeti": "",
+  "formular": {"endpoint": "", "demo": true, "predmet": "Dopyt z webu allsportsacademy.sk"},
+  "nav": [
+    {"text": "Pre koho", "href": "#kurz"},
+    {"text": "Plávanie", "href": "#plavanie"},
+    {"text": "Lyžovanie", "href": "#lyzovanie"},
+    {"text": "Lezenie", "href": "#lezenie"},
+    {"text": "Cenník", "href": "#cennik"},
+    {"text": "Kontakt", "href": "#kontakt"}
+  ]
+}

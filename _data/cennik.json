@@ -1,0 +1,81 @@
+{
+ "lyzovanie": {
+  "hlavicka": [
+   "",
+   "1 hodina",
+   "2 hodiny",
+   "3 hodiny"
+  ],
+  "riadky": [
+   [
+    "1 osoba",
+    "35 €",
+    "60 €",
+    "88 €"
+   ],
+   [
+    "2 osoby",
+    "62 €",
+    "108 €",
+    "156 €"
+   ],
+   [
+    "3 osoby",
+    "87 €",
+    "138 €",
+    "172 €"
+   ]
+  ],
+  "poznamky": [
+   "Lekcia trvá 55 minút. Pri strediskách vzdialených od Banskej Bystrice viac ako 15 km sa k základným cenám pripočítava 10 €.",
+   "Pri zaplatení 5 lekcií vopred je zľava 10 %."
+  ],
+  "skupina": {
+   "nazov": "Skupinová lekcia, 4 až 7 osôb (2 hodiny)",
+   "riadky": [
+    [
+     "2 lekcie",
+     "42 € / osoba"
+    ],
+    [
+     "3 lekcie",
+     "52 € / osoba"
+    ],
+    [
+     "4 lekcie",
+     "62 € / osoba"
+    ]
+   ]
+  }
+ },
+ "lezenie": [
+  {
+   "kod": "S",
+   "nazov": "Kurz istenia druholezca s horným lanom",
+   "cena": "45 € / 2 osoby",
+   "dalsia": "každá ďalšia osoba 20 €",
+   "popis": "Kurz istenia druholezca s horným lanom."
+  },
+  {
+   "kod": "M",
+   "nazov": "Kurz lezenia a istenia prvolezca",
+   "cena": "45 € / 2 osoby",
+   "dalsia": "každá ďalšia osoba 20 €",
+   "popis": "Lezenie a istenie prvolezca."
+  },
+  {
+   "kod": "L",
+   "nazov": "Základný kurz lezenia na umelej stene",
+   "cena": "55 € / osoba",
+   "dalsia": "každá ďalšia osoba 45 €",
+   "popis": "Základný kurz lezenia na umelej stene."
+  },
+  {
+   "kod": "1h",
+   "nazov": "Individuálny tréning s inštruktorom",
+   "cena": "15 € / hodina",
+   "dalsia": "",
+   "popis": "Individuálny tréning s inštruktorom."
+  }
+ ]
+}
